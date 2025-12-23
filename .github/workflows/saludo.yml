@@ -1,0 +1,12 @@
+name: Mi Primer Pipeline
+on: [push] # Se activa con cada push
+
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+      
+      - name: Ejecutar un script
+        run: echo "¡El pipeline se ejecutó correctamente!"
